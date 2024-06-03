@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails de la conservation</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Référentiels de conservation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recherche">Recherche</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/apropos">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<body>
+  <div class="container">
+    <h1 class="my-4">Détails de la donnée</h1>
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <td><%= item.ID %></td>
+      </tr>
+      <tr>
+        <th>Processus</th>
+        <td><%= item.PROCESS %></td>
+      </tr>
+      <tr>
+        <th>Document</th>
+        <td><%= item.DOCUMENT %></td>
+      </tr>
+      <tr>
+        <th>Juridiction</th>
+        <td><%= item.JURIDICTION %></td>
+      </tr>
+      <tr>
+        <th>Justification du Risque</th>
+        <td><%= item.JUSTIF_RISQUE %></td>
+      </tr>
+      <tr>
+        <th>Risque</th>
+        <td><%= item.RISQUE %></td>
+      </tr>
+      <tr>
+        <th>DUA</th>
+        <td><%= item.DUA %></td>
+      </tr>
+      <tr>
+        <th>Texte de Référence</th>
+        <td><%= item.TXTREF %></td>
+      </tr>
+      <tr>
+        <th>Déclenchement DUA</th>
+        <td><%= item.DECLENCHEMENT_DUA %></td>
+      </tr>
+      <tr>
+        <th>Sort Final</th>
+        <td><%= item.SORT_FINAL %></td>
+      </tr>
+      <tr>
+        <th>Communicabilité</th>
+        <td><%= item.COMMUNICABILITE %></td>
+      </tr>
+      <tr>
+        <th>Observations</th>
+        <td><%= item.OBSERVATIONS %></td>
+      </tr>
+    </table>
+    <a href="/recherche" class="btn btn-primary">Retour à la liste</a>
+  </div>
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 XDEMAT. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche - référentiel de conservation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .search-form {
+            padding: 40px 0;
+        }
+        .treeview ul {
+            list-style-type: none;
+        }
+        .treeview li {
+            margin: 10px 0;
+        }
+        .treeview a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Référentiels de conservation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Accueil</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/recherche">Recherche</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/apropos">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Section -->
+    <section class="search-form container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control form-control-lg" placeholder="Rechercher des notices...">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select class="form-control form-control-lg">
+                                <option value="">Processus</option>
+                                <option value="lettre">Passation de marché</option>
+                                <option value="photo">Execution de marché</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select class="form-control form-control-lg">
+                                <option value="">Sous-processus</option>
+                                <option value="20e">Phase de publicité</option>
+                                <option value="19e">Phase de réception</option>
+                                <option value="18e">Candidatures non retenues</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Rechercher</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tree View Section -->
+    <section class="container treeview">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <h2>Plan de classement</h2>
+                <br/>
+                <% Object.keys(groupedData).forEach(process => { %>
+                <h3>Processus : <%= process %></h3>
+                <ul class="list-group mb-4">
+                    <% groupedData[process].forEach(item => { %>
+                    <li class="list-group-item">
+                        <ul>
+                            
+                            <a href="/data/<%= item.ID %>"><%= item.DOCUMENT %></a>
+                        </ul>
+                    </li>
+                    <% }) %>
+                </ul>
+                <% }) %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 XDEMAT. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

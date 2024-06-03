@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Référentiels de conservation - XDEMAT</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .header {
+            background: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMDktYWRqLTA1LmpwZw.jpg') no-repeat center center;
+            background-size: cover;
+            color: black;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3.5rem;
+        }
+        .search-section {
+            padding: 40px 0;
+        }
+        .notice-card {
+            margin-bottom: 30px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Référentiels de conservation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recherche">Recherche</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/apropos">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <h1>Référentiels de conservation XDEMAT</h1>
+            <p>Explorez nos notices et trouvez des règles de conservation fiables et adaptées</p>
+        </div>
+    </div>
+
+    <!-- Search Section -->
+    <section class="search-section container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" placeholder="Rechercher des notices...">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Rechercher</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notices Section -->
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4 notice-card">
+                <div class="card">
+                    <img src="./logo-xdemat.png" width="350" height="150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dossier de consultation des entreprises</h5>
+                        <p class="card-text">Processus de passation des marchés, phase de publicité du marché.</p>
+                        <a href="/data/512" class="btn btn-primary">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 notice-card">
+                <div class="card">
+                    <img src="./logo-xdemat.png" width="350" height="150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dossier de candidature retenu</h5>
+                        <p class="card-text">DProcessus de passation des marchés, pour une offre retenue dans un marché de travaux.</p>
+                        <a href="/data/522" class="btn btn-primary">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 notice-card">
+                <div class="card">
+                    <img src="./logo-xdemat.png" width="350" height="150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Demande de nantissement</h5>
+                        <p class="card-text">Processus d'exécution des marchés.</p>
+                        <a href="/data/556" class="btn btn-primary">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 XDEMAT. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
